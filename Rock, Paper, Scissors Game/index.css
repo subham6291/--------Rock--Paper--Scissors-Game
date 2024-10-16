@@ -1,0 +1,200 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background-color: black;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+.names {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+
+  margin: 40px 0;
+}
+
+.item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 10px;
+}
+
+.rock {
+  aspect-ratio: 3/2.2;
+  object-fit: contain;
+  margin-bottom: 0;
+  width: 150px;
+  height: 200px;
+}
+
+.button {
+  margin: 10px;
+  padding: 0;
+  text-align: center;
+  justify-content: center;
+  height: 50px;
+  width: 120px;
+  border-radius: 30px;
+  color: #ffffff;
+  border: 2px solid transparent;
+  background: linear-gradient(90deg, #ff6f61, #ff3c38, #ffda00, #ff6f61);
+  background-size: 300%;
+  cursor: pointer;
+  transition:
+    background-position 0.5s ease-in-out,
+    transform 0.3s,
+    box-shadow 0.3s;
+  overflow: hidden;
+  box-shadow: 0 0 10px rgba(255, 218, 0, 0.8);
+  text-transform: uppercase;
+  color: rgb(0, 255, 255);
+}
+
+.button:hover {
+  color: #ffffff;
+  border-color: #ffda00;
+  transform: scale(1.1);
+  background-position: 100%;
+  box-shadow: 0 0 20px rgba(255, 218, 0, 0.8);
+}
+
+.score {
+  justify-content: center;
+  font-weight: 500;
+  text-align: center;
+  display: inline;
+  font-weight: 800;
+  font-family:
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Roboto,
+    Oxygen,
+    Ubuntu,
+    Cantarell,
+    "Open Sans",
+    "Helvetica Neue",
+    sans-serif;
+  justify-content: center;
+  display: flex;
+  margin-left: 200px;
+  color: lightskyblue;
+
+  border: #ff3c38;
+  cursor: pointer;
+  padding: 0%, 0%, 50%;
+  display: inline;
+}
+
+.computer {
+  text-align: center;
+  text-transform: capitalize;
+  background-color: #ff3c38;
+  padding: 20px;
+  width: 100%;
+  display: flex;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.result-display {
+  background-color: black;
+  color: #ffffff;
+  border-radius: 10px;
+  position: relative;
+  overflow: clip;
+}
+.result-display::before {
+  box-shadow: 0, 0, 20px, white;
+  animation: animate 4s linear infinite;
+  background-color: azure;
+  background-color: rgb(4, 75, 97);
+  border-radius: 16px;
+}
+@keyframes animate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(60deg);
+  }
+}
+
+.villian,
+.boy {
+  width: 150px;
+  height: auto;
+  margin: 20px auto;
+  display: flex;
+  margin: 50px;
+  background-color: #ff3c38;
+  color: #ff3c38;
+  margin-left: 100px;
+}
+
+.command {
+  color: beige;
+  padding: 10px 0;
+  font-size: 18px;
+  margin: 5px 0;
+}
+
+.background {
+  padding: 0%;
+  display: inline;
+}
+@keyframes borderAnimation {
+  0% {
+    border-color: rgba(255, 60, 56, 1);
+  }
+  25% {
+    border-color: rgba(0, 255, 255, 1);
+  }
+  50% {
+    border-color: rgba(0, 255, 0, 1);
+  }
+  75% {
+    border-color: rgba(255, 255, 0, 1);
+  }
+  100% {
+    border-color: rgba(255, 60, 56, 1);
+  }
+}
+
+.magic {
+  background-color: rgba(0, 0, 0, 0.932);
+  color: rgba(0, 255, 255, 0.836);
+  margin-left: 90%;
+  border-radius: 30px;
+  height: 30px;
+  width: 10%;
+  border: 2px solid #ff3c38;
+  margin-top: 20px;
+  transition:
+    box-shadow 0.3s ease,
+    transform 0.3s ease;
+  animation: borderAnimation 3s linear infinite;
+}
+
+.magic:hover {
+  box-shadow:
+    0 0 15px rgba(255, 60, 56, 0.8),
+    0 0 30px rgba(255, 60, 56, 0.8);
+  transform: scale(1.1);
+}
+
+.magic:active {
+  transform: scale(0.9);
+}
+
+.magic:not(:hover) {
+  transition: transform 0.3s ease;
+}
